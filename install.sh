@@ -1,3 +1,3 @@
 #!/bin/sh
 git clone git://github.com/msonnabaum/rage-reducing-dotfiles.git
-ls rage-reducing-dotfiles/| while read i; do cp "${i}" ~/.${i}; done
+cd rage-reducing-dotfiles && ls | grep -v "install"| grep -v "README" | while read i; do cp "${i}" ~/.${i}; done
